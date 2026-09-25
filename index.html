@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Early Warning System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🌊 FloodGuard</div>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="tag">SMART FLOOD MONITORING</p>
+        <h1>Flood Early Warning System</h1>
+        <p>Monitor water levels in real time and receive early warnings before flood conditions become dangerous.</p>
+        <a class="btn" href="#dashboard">Open Dashboard</a>
+      </div>
+      <div class="hero-icon">🌧️<br><span>🌊</span></div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <h2>Live Monitoring Dashboard</h2>
+      <div class="grid">
+        <div class="card level-card">
+          <div class="card-title">Water Level</div>
+          <div id="waterLevel" class="big-number">3.2 m</div>
+          <div class="meter"><div id="meterFill"></div></div>
+          <div id="status" class="status safe">SAFE</div>
+          <p>Last updated: <span id="updated">Just now</span></p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Sensor Status</div>
+          <div class="sensor online">● ONLINE</div>
+          <p>Water-level sensor is connected and sending data.</p>
+          <div class="small-data"><span>Sensor ID</span><b>FWS-001</b></div>
+          <div class="small-data"><span>Battery</span><b>92%</b></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Alert Center</div>
+          <div id="alertBox" class="alert safe-alert">No immediate flood danger detected.</div>
+          <button id="simulateBtn" class="btn secondary">Simulate Sensor Reading</button>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><i class="dot safe-dot"></i> Safe: below 5 m</span>
+        <span><i class="dot warning-dot"></i> Warning: 5–7 m</span>
+        <span><i class="dot danger-dot"></i> Danger: above 7 m</span>
+      </div>
+    </section>
+
+    <section id="how" class="section how">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div><b>1</b><h3>Sensor</h3><p>A water-level sensor measures the river or reservoir level.</p></div>
+        <div><b>2</b><h3>Monitoring</h3><p>The system processes sensor readings continuously.</p></div>
+        <div><b>3</b><h3>Alert</h3><p>When thresholds are crossed, an early warning is displayed.</p></div>
+        <div><b>4</b><h3>Response</h3><p>People can take safety measures and move to safer areas.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Emergency Information</h2>
+      <p>This demo is for educational purposes. Connect the frontend to real sensors, a backend, and an official emergency-alert service for deployment.</p>
+      <div class="emergency">🚨 In a real emergency, contact your local emergency services.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 FloodGuard — Flood Early Warning System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
